@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM Messages</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id="toast"></div>
+    <div>
+        <div onclick="showSuccessToast();" class="btn btn--success">Show Success Toast</div>
+        <div onclick="showInfoToast();" class="btn btn--info">Show Info Toast</div>
+        <div onclick="showWarningToast();" class="btn btn--warn">Show Warning Toast</div>
+        <div onclick="showErrorToast();"  class="btn btn--danger">Show Error Toast</div>
+    </div>
+
+
+    <script src="./main.js"></script>
+    <script>
+
+        function showSuccessToast() {
+            toast({
+                title: "Thành công!",
+                message: "Bạn đã Click vào Button 'Thành công'",
+                type: "success",
+                duration: 5000
+            });
+        };
+        function showInfoToast() {
+            toast({
+                title: "Thông tin!",
+                message: "Bạn đã Click vào Button 'Thông tin'",
+                type: "info",
+                duration: 5000
+            });
+        };
+        function showWarningToast() {
+            toast({
+                title: "Cảnh báo!",
+                message: "Bạn đã Click vào Button 'Cảnh báo'",
+                type: "warning",
+                duration: 5000
+            });
+        };
+
+        function showErrorToast() {
+            toast({
+                title: "Thất bại!",
+                message: "Bạn đã Click vào Button 'Lỗi'",
+                type: "error",
+                duration: 5000
+            });
+        };
+
+    </script>
+</body>
+</html>
